@@ -26,7 +26,10 @@ export default {
   mounted() {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((response) => response.json())
-      .then((json) => (this.contacts = json));
+      .then((json) => (this.contacts = json))
+      .catch((e) => {
+        console.log(e);
+      });
   },
 };
 </script>

@@ -26,6 +26,9 @@ export default {
             this.photo = ph;
           }
         });
+      })
+      .catch((e) => {
+        console.log(e);
       });
   },
   methods: {
